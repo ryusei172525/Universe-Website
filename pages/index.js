@@ -1,14 +1,24 @@
 import Head from 'next/head'
 import { useEffect } from 'react'
+import { useRouter } from 'next/router'
 import styles from '../styles/Home.module.css'
 
 export default function Home() {
+  const router = useRouter();
+
   useEffect(() => {
-    const script = document.createElement('script');
-    script.src = '/script.js';
-    script.async = true;
-    document.body.appendChild(script);
-  }, []);
+    const userAgent = navigator.userAgent;
+    const isMobile = /Mobi|Android/i.test(userAgent);
+
+    if (isMobile) {
+      router.push('/mobile'); // スマホ用ページにリダイレクト
+    } else {
+      const script = document.createElement('script');
+      script.src = '/script.js';
+      script.async = true;
+      document.body.appendChild(script);
+    }
+  }, [router]);
 
   return (
     <div className={styles.container}>
