@@ -1,7 +1,15 @@
 import Head from 'next/head'
+import { useEffect } from 'react'
 import styles from '../styles/Mobile.module.css'
 
 export default function Mobile() {
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.src = '/meteors.js';
+    script.async = true;
+    document.body.appendChild(script);
+  }, []);
+
   return (
     <div className={styles.container}>
       <Head>
