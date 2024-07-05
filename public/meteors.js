@@ -5,6 +5,10 @@ document.addEventListener('DOMContentLoaded', function() {
   
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
+    canvas.style.position = 'fixed';
+    canvas.style.top = 0;
+    canvas.style.left = 0;
+    canvas.style.zIndex = -1;
   
     const numberOfMeteors = 10;
     const meteors = [];

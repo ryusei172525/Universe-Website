@@ -1,15 +1,8 @@
 import Head from 'next/head'
-import { useEffect } from 'react'
+import Link from 'next/link'
 import styles from '../styles/Mobile.module.css'
 
 export default function Mobile() {
-  useEffect(() => {
-    const script = document.createElement('script');
-    script.src = '/meteors.js';
-    script.async = true;
-    document.body.appendChild(script);
-  }, []);
-
   return (
     <div className={styles.container}>
       <Head>
@@ -23,30 +16,48 @@ export default function Mobile() {
         </h1>
 
         <div className={styles.grid}>
-          <a href="#" className={styles.card}>
-            <h2>Cosmology &rarr;</h2>
-          </a>
+          <Link href="#">
+            <div className={styles.card}>
+              <h2>Cosmology &rarr;</h2>
+            </div>
+          </Link>
 
-          <a href="#" className={styles.card}>
-            <h2>Galaxy Clusters &rarr;</h2>
-          </a>
+          <Link href="#">
+            <div className={styles.card}>
+              <h2>Galaxy Clusters &rarr;</h2>
+            </div>
+          </Link>
 
-          <a href="#" className={styles.card}>
-            <h2>Galaxy Evolution &rarr;</h2>
-          </a>
+          <Link href="#">
+            <div className={styles.card}>
+              <h2>Galaxy Evolution &rarr;</h2>
+            </div>
+          </Link>
 
-          <a href="#" className={styles.card}>
-            <h2>Active Galactic Nuclei &rarr;</h2>
-          </a>
+          <Link href="#">
+            <div className={styles.card}>
+              <h2>Active Galactic Nuclei &rarr;</h2>
+            </div>
+          </Link>
 
-          <a href="#" className={styles.card}>
-            <h2>Star Formation &rarr;</h2>
-          </a>
+          <Link href="#">
+            <div className={styles.card}>
+              <h2>Star Formation &rarr;</h2>
+            </div>
+          </Link>
 
-          <a href="#" className={styles.card}>
-            <h2>Interstellar Phenomena &rarr;</h2>
-          </a>
+          <Link href="#">
+            <div className={styles.card}>
+              <h2>Interstellar Phenomena&rarr;</h2>
+            </div>
+          </Link>
         </div>
+
+        <div className={styles.shootingStar}></div>
+        <div className={styles.shootingStar}></div>
+        <div className={styles.shootingStar}></div>
+        <div className={styles.shootingStar}></div>
+        <div className={styles.shootingStar}></div>
       </main>
     </div>
   )
