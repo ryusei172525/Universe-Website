@@ -7,18 +7,26 @@ export default function Home() {
   const router = useRouter();
 
   useEffect(() => {
-    const userAgent = navigator.userAgent;
-    const isMobile = /Mobi|Android/i.test(userAgent);
+    const handleResize = () => {
+      if (window.innerWidth <= 600) {
+        router.push('/mobile'); // 画面幅が600px以下の場合、スマホ用ページにリダイレクト
+      }
+    };
 
-    if (isMobile) {
-      router.push('/mobile'); // スマホ用ページにリダイレクト
-    } else {
-      const script = document.createElement('script');
-      script.src = '/script.js';
-      script.async = true;
-      document.body.appendChild(script);
-    }
+    handleResize(); // 初期チェック
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
   }, [router]);
+
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.src = '/script.js';
+    script.async = true;
+    document.body.appendChild(script);
+  }, []);
 
   return (
     <div className={styles.container}>
