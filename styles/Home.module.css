@@ -29,7 +29,7 @@
   align-items: center;
   z-index: 2; /* コンテンツをcanvasの上に配置 */
   color: white; /* テキストカラーを白に */
-  margin-top: 19rem; /* 上部にマージンを追加 */
+  /* margin-top: 19rem; 上部にマージンを追加 */
 }
 
 .footer {
