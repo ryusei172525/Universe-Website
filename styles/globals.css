@@ -8,3 +8,7 @@ html, body {
   background-color: black;
   overflow-x: hidden; /* 横スクロールバーを隠す */
 }
+
+a {
+  text-decoration: none;
+}

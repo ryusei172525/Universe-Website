@@ -40,7 +40,7 @@ export default function Home() {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Welcome to Science Website
+          Welcome to Universe Website
         </h1>
 
         <div className={styles.grid}>

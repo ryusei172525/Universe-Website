@@ -1,18 +1,30 @@
 import Head from 'next/head'
+import { useEffect } from 'react'
 import Link from 'next/link'
 import styles from '../styles/Mobile.module.css'
 
+
+
 export default function Mobile() {
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.src = '/script.js';
+    script.async = true;
+    document.body.appendChild(script);
+  }, []);
+
   return (
     <div className={styles.container}>
       <Head>
-        <title>Mobile Science Website</title>
+        <title>Mobile Universe Website</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
 
+      <canvas id="spaceCanvas" className={styles.canvas}></canvas>
+
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Welcome to Science Website
+          Welcome to Universe Website
         </h1>
 
         <div className={styles.grid}>

@@ -1,4 +1,4 @@
-# Science Website v3
+# Universe Website v3
 
 This is a Next.js project to create a website explaining six fields:
 - Cosmology
