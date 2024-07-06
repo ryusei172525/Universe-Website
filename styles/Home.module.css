@@ -41,6 +41,7 @@
   justify-content: center;
   align-items: center;
   z-index: 2; /* コンテンツをcanvasの上に配置 */
+  color: white;
 }
 
 .footer img {
@@ -79,6 +80,7 @@
   justify-content: center;
   align-items: center;
   text-align: center;
+  height: 7rem;
   z-index: 2; /* コンテンツをcanvasの上に配置 */
 }
 

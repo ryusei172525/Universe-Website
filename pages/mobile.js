@@ -1,9 +1,7 @@
 import Head from 'next/head'
 import { useEffect } from 'react'
-import Link from 'next/link'
+import LinkCard from '../components/LinkCard'
 import styles from '../styles/Mobile.module.css'
-
-
 
 export default function Mobile() {
   useEffect(() => {
@@ -24,52 +22,17 @@ export default function Mobile() {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Welcome to Universe Website
+          Welcome to RYUSEI'S <br /> Universe Website
         </h1>
 
         <div className={styles.grid}>
-          <Link href="#">
-            <div className={styles.card}>
-              <h2>Cosmology &rarr;</h2>
-            </div>
-          </Link>
-
-          <Link href="#">
-            <div className={styles.card}>
-              <h2>Galaxy Clusters &rarr;</h2>
-            </div>
-          </Link>
-
-          <Link href="#">
-            <div className={styles.card}>
-              <h2>Galaxy Evolution &rarr;</h2>
-            </div>
-          </Link>
-
-          <Link href="#">
-            <div className={styles.card}>
-              <h2>Active Galactic Nuclei &rarr;</h2>
-            </div>
-          </Link>
-
-          <Link href="#">
-            <div className={styles.card}>
-              <h2>Star Formation &rarr;</h2>
-            </div>
-          </Link>
-
-          <Link href="#">
-            <div className={styles.card}>
-              <h2>Interstellar Phenomena&rarr;</h2>
-            </div>
-          </Link>
+          <LinkCard href="#" title="Cosmology"  card_style={styles.card} />
+          <LinkCard href="#" title="Galaxy Clusters"  card_style={styles.card}/>
+          <LinkCard href="#" title="Galaxy Evolution"  card_style={styles.card} />
+          <LinkCard href="#" title="Active Galactic Nuclei"  card_style={styles.card} />
+          <LinkCard href="#" title="Star Formation"  card_style={styles.card} />
+          <LinkCard href="#" title="Interstellar Phenomena"  card_style={styles.card} />
         </div>
-
-        <div className={styles.shootingStar}></div>
-        <div className={styles.shootingStar}></div>
-        <div className={styles.shootingStar}></div>
-        <div className={styles.shootingStar}></div>
-        <div className={styles.shootingStar}></div>
       </main>
     </div>
   )

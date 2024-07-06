@@ -1,6 +1,8 @@
 import Head from 'next/head'
 import { useEffect } from 'react'
 import { useRouter } from 'next/router'
+import LinkCard from '../components/LinkCard'
+import Link from 'next/link'
 import styles from '../styles/Home.module.css'
 
 export default function Home() {
@@ -40,50 +42,23 @@ export default function Home() {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Welcome to Universe Website
+          Welcome to RYUSEI's <br /> Universe Website
         </h1>
 
         <div className={styles.grid}>
-          <a href="#" className={styles.card}>
-            <h2>Cosmology &rarr;</h2>
-            <p>Explore cosmology</p>
-          </a>
-
-          <a href="#" className={styles.card}>
-            <h2>Galaxy Clusters &rarr;</h2>
-            <p>Explore galaxy clusters</p>
-          </a>
-
-          <a href="#" className={styles.card}>
-            <h2>Galaxy Evolution &rarr;</h2>
-            <p>Explore galaxy evolution</p>
-          </a>
-
-          <a href="#" className={styles.card}>
-            <h2>Active Galactic Nuclei &rarr;</h2>
-            <p>Explore active galactic nuclei</p>
-          </a>
-
-          <a href="#" className={styles.card}>
-            <h2>Star Formation &rarr;</h2>
-            <p>Explore star formation</p>
-          </a>
-
-          <a href="#" className={styles.card}>
-            <h2>Interstellar Phenomena &rarr;</h2>
-            <p>Explore interstellar phenomena</p>
-          </a>
+          <LinkCard href="#" title="Cosmology" description="Explore cosmology" card_style={styles.card} />
+          <LinkCard href="#" title="Galaxy Clusters" description="Explore galaxy clusters" card_style={styles.card} />
+          <LinkCard href="#" title="Galaxy Evolution" description="Explore galaxy evolution" card_style={styles.card} />
+          <LinkCard href="#" title="Active Galactic Nuclei" description="Explore active galactic nuclei" card_style={styles.card} />
+          <LinkCard href="#" title="Star Formation" description="Explore star formation" card_style={styles.card} />
+          <LinkCard href="#" title="Interstellar Phenomena" description="Explore interstellar phenomena" card_style={styles.card} />
         </div>
       </main>
 
       <footer className={styles.footer}>
-        <a
-          href="https://kano-ryusei.net/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Creator information
-        </a>
+        <Link href="https://kano-ryusei.net/" target="_blank" rel="noopener noreferrer">
+          Creator: Ryusei Kano's Website
+        </Link>
       </footer>
     </div>
   )
