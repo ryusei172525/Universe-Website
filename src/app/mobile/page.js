@@ -1,7 +1,10 @@
+"use client";
+
+import '@/styles/globals.css'
 import Head from 'next/head'
 import { useEffect } from 'react'
-import LinkCard from '../components/LinkCard'
-import styles from '../styles/Mobile.module.css'
+import LinkCard from '@/components/LinkCard'
+import styles from '@/styles/Mobile.module.css'
 
 export default function Mobile() {
   useEffect(() => {
@@ -26,7 +29,7 @@ export default function Mobile() {
         </h1>
 
         <div className={styles.grid}>
-          <LinkCard href="#" title="Cosmology"  card_style={styles.card} />
+          <LinkCard href="Cosmology" title="Cosmology"  card_style={styles.card} />
           <LinkCard href="#" title="Galaxy Clusters"  card_style={styles.card}/>
           <LinkCard href="#" title="Galaxy Evolution"  card_style={styles.card} />
           <LinkCard href="#" title="Active Galactic Nuclei"  card_style={styles.card} />

@@ -1,9 +1,13 @@
+"use client";
+
 import Head from 'next/head'
 import { useEffect } from 'react'
-import { useRouter } from 'next/router'
-import LinkCard from '../components/LinkCard'
+import { useRouter } from 'next/navigation'
 import Link from 'next/link'
-import styles from '../styles/Home.module.css'
+import '@/styles/globals.css'
+import styles from '@/styles/Home.module.css'
+import LinkCard from '@/components/LinkCard'
+import Footer from '@/components/Footer'
 
 export default function Home() {
   const router = useRouter();
@@ -46,7 +50,7 @@ export default function Home() {
         </h1>
 
         <div className={styles.grid}>
-          <LinkCard href="#" title="Cosmology" description="Explore cosmology" card_style={styles.card} />
+          <LinkCard href="Cosmology" title="Cosmology" description="Explore cosmology" card_style={styles.card} />
           <LinkCard href="#" title="Galaxy Clusters" description="Explore galaxy clusters" card_style={styles.card} />
           <LinkCard href="#" title="Galaxy Evolution" description="Explore galaxy evolution" card_style={styles.card} />
           <LinkCard href="#" title="Active Galactic Nuclei" description="Explore active galactic nuclei" card_style={styles.card} />
@@ -55,11 +59,7 @@ export default function Home() {
         </div>
       </main>
 
-      <footer className={styles.footer}>
-        <Link href="https://kano-ryusei.net/" target="_blank" rel="noopener noreferrer">
-          Creator: Ryusei Kano's Website
-        </Link>
-      </footer>
+      <Footer />
     </div>
   )
 }
